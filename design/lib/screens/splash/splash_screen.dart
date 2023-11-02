@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
             Column(
               children: [
                 Image.asset(
-                  "assets/images/logo.png",
+                  "assets/images/logo1.jpg",
                   height: 300.0,
                   width: 300.0,
                 ),
@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
                   height: 40,
                 ),
                 const Text(
-                  "Doctor For Plants",
+                  "eAttendance",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,

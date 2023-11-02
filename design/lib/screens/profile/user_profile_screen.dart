@@ -22,11 +22,12 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const DecoratedBox(
-                    decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.black,
-                )),
+                const CircleAvatar(
+                  radius: 60,
+                  backgroundImage: AssetImage("assets/images/logo.png"),
+
+
+                ),
                 const SizedBox(height: 10),
                 const Text(
                   "Profile",
