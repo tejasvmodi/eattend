@@ -45,7 +45,7 @@ class AboutUs extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "To assist farmers in identifying plant diseases and providing expert guidance.",
+                "To reduce time taken by manual proccess of taking attendance.",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,

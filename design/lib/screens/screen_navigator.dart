@@ -19,7 +19,10 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> currentScreen = [
-      const Home(),
+      // if session is active then this is the default formate
+      // const Home(),
+      // else
+
       ExpertList(),
       const UserProfileScreen(),
     ];
@@ -37,11 +40,12 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const [
-          BottomNavigationBarItem(
-            tooltip: 'Mark Attendance',
-            icon: Icon(Icons.home),
-            label: 'Mark Attendance',
-          ),
+          // when session is active then this is active other wise this will be desable 
+          // BottomNavigationBarItem(
+          //   tooltip: 'Mark Attendance',
+          //   icon: Icon(Icons.home),
+          //   label: 'Mark Attendance',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_search),
             label: 'see Attendance',
