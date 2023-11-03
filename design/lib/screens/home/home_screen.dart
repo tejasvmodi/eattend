@@ -1,5 +1,6 @@
 import 'package:design/screens/view_attendance/attendance_list.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -8,6 +9,16 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+  class ButtonState extends ChangeNotifier {
+  bool _isButtonEnabled = true;
+
+  bool get isButtonEnabled => _isButtonEnabled;
+
+  void disableButton() {
+    _isButtonEnabled = false;
+    notifyListeners();
+  }
+}
 class _HomeState extends State<Home> {
   bool isButtonDisable = false;
 
@@ -24,6 +35,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+      final buttonState = Provider.of<ButtonState>(context);
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,15 +48,17 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          ElevatedButton(
-            onPressed: isButtonDisable
-                ? null
-                : () {
-                    disableButton();
-                    _showAlertDialog(context,"Server Response");
-                  },
-            child: const Text("Fill Attendace"),
-          ),
+           ElevatedButton(
+          onPressed: buttonState.isButtonEnabled
+              ? () {
+                  // Your action when the button is pressed
+                  buttonState.disableButton(); 
+                  _showAlertDialog(context, "Server Response ");// Disable the button
+                }
+              : null,
+          child: const Text('Press Me'),
+        ),
+      
 
           //create the second OTP module
         ],

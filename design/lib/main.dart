@@ -1,11 +1,13 @@
 import 'package:design/auth/auth_repository.dart';
 import 'package:design/controllers/permissions_controller.dart';
 import 'package:design/firebase_options.dart';
+import 'package:design/screens/home/home_screen.dart';
 import 'package:design/screens/splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
   
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,8 +16,17 @@ Future<void> main() async {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
   Get.put(GrantPermissions());
 
-  runApp(const MyApp());
+ 
+  runApp(
+  ChangeNotifierProvider(
+    create: (context) => ButtonState(),
+    child: const MyApp(),
+  ),
+);
+
 }
+  
+  
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
