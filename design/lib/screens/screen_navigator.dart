@@ -1,8 +1,8 @@
 import 'package:design/screens/experts/expert_list.dart';
-import 'package:design/screens/home/home_screen.dart';
+
 import 'package:design/screens/profile/user_profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'components/bottom_navigation_floting.dart';
+
 import 'components/drawer_navigation.dart';
 import 'components/custom_appbar.dart';
 
