@@ -1,3 +1,4 @@
+import 'package:design/screens/view_attendance/attendance_list.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -40,6 +41,7 @@ class _HomeState extends State<Home> {
                 ? null
                 : () {
                     disableButton();
+                    _showAlertDialog(context,"Server Response");
                   },
             child: const Text("Fill Attendace"),
           ),
@@ -50,3 +52,22 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+  void _showAlertDialog(BuildContext context,String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          content:  Text(message,),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
