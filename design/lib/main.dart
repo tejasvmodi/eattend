@@ -1,4 +1,4 @@
-import 'package:design/auth/firebase_auth_repository.dart';
+import 'package:design/auth/auth_repository.dart';
 import 'package:design/controllers/permissions_controller.dart';
 import 'package:design/firebase_options.dart';
 import 'package:design/screens/splash/splash_screen.dart';
@@ -16,6 +16,7 @@ Future<void> main() async {
 
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

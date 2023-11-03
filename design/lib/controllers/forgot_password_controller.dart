@@ -1,4 +1,4 @@
-import 'package:design/auth/firebase_auth_repository.dart';
+import 'package:design/auth/auth_repository.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 

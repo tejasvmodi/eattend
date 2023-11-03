@@ -1,3 +1,4 @@
+import 'package:design/utility/constants.dart';
 import 'package:flutter/material.dart';
 
 class AboutUs extends StatelessWidget {
@@ -23,7 +24,7 @@ class AboutUs extends StatelessWidget {
               Image(
                 height: 200,
                 width: 300,
-                image: AssetImage('assets/images/logo1.jpg'),
+                image: AssetImage(appLogo),
               ),
               SizedBox(height: 30),
               Text(
@@ -45,7 +46,7 @@ class AboutUs extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "To reduce time taken by manual proccess of taking attendance.",
+                "To reduce time taken by manual proccess of taking attendance.",
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,

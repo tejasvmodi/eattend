@@ -1,4 +1,5 @@
 import 'package:design/controllers/forgot_password_controller.dart';
+import 'package:design/utility/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,13 +23,17 @@ class ForgotPasswordForm extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/logo1.jpg',
-            height: animationController.value * 200,
-            width: animationController.value * 300,
+            appLogo,
+            height: animationController.value * 125,
+            width: animationController.value * 125,
           ),
-          
+          const SizedBox(height: 20),
+          const Text(
+            appName,
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
           const SizedBox(
-            height: 35,
+            height: 25,
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
