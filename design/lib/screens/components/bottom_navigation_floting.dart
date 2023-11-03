@@ -68,7 +68,7 @@ class _FlotingBottomNavigationState extends State<FlotingBottomNavigation> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const Text(
-                    "Pick Plant Image",
+                    "Scan QR",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
@@ -85,18 +85,6 @@ class _FlotingBottomNavigationState extends State<FlotingBottomNavigation> {
                     ),
                     label: const Text(
                       "CAMERA",
-                    ),
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      pickImage(ImageSource.gallery);
-                      Get.back();
-                    },
-                    icon: const Icon(
-                      Icons.image,
-                    ),
-                    label: const Text(
-                      "GALLERY",
                     ),
                   ),
                   const SizedBox(

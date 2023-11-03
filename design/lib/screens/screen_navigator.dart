@@ -1,4 +1,5 @@
-import 'package:design/screens/experts/expert_list.dart';
+import 'package:design/screens/home/home_screen.dart';
+import 'package:design/screens/view_attendance/attendance_list.dart';
 
 import 'package:design/screens/profile/user_profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,11 +20,8 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> currentScreen = [
-      // if session is active then this is the default formate
-      // const Home(),
-      // else
-
-      ExpertList(),
+      const Home(),
+      const AttendanceList(),
       const UserProfileScreen(),
     ];
 
@@ -40,14 +38,14 @@ class _ScreenNavigatorState extends State<ScreenNavigator> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const [
-          // when session is active then this is active other wise this will be desable 
-          // BottomNavigationBarItem(
-          //   tooltip: 'Mark Attendance',
-          //   icon: Icon(Icons.home),
-          //   label: 'Mark Attendance',
-          // ),
+          // when session is active then this is active other wise this will be desable
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_search),
+            tooltip: 'Mark Attendance',
+            icon: Icon(Icons.home),
+            label: 'Mark Attendance',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
             label: 'see Attendance',
             tooltip: 'see Attendance',
           ),

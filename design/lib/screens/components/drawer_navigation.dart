@@ -1,5 +1,6 @@
+import 'package:design/utility/constants.dart';
 import 'package:flutter/material.dart';
-import '../../auth/firebase_auth_repository.dart';
+import '../../auth/auth_repository.dart';
 import '../contact_us/about_us.dart';
 import '../contact_us/contact_us.dart';
 
@@ -13,10 +14,7 @@ class DrawerNavigation extends StatelessWidget {
         children: [
           const DrawerHeader(
             child: Center(
-              child: Image(
-                  height: 150,
-                  width: 300,
-                  image: AssetImage('assets/images/logo1.jpg')),
+              child: Image(height: 150, width: 300, image: AssetImage(appLogo)),
             ),
           ),
           ListTile(
@@ -52,6 +50,7 @@ class DrawerNavigation extends StatelessWidget {
               icon: const Icon(Icons.logout),
             ),
           ),
+          const SizedBox(height: 20)
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:design/models/user_model.dart';
+import 'package:design/utility/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,13 +29,13 @@ class _RegistrationFormState extends State<RegistrationForm> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/logo.png',
+            appLogo,
             height: widget.animationController.value * 100,
             width: widget.animationController.value * 100,
           ),
           const SizedBox(height: 20),
           const Text(
-            'Growth Guards',
+            appName,
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           const SizedBox(

@@ -1,7 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../notification_screen.dart';
 
 class CustomAppBar {
   PreferredSizeWidget customAppBar({title = 'eAttend'}) {

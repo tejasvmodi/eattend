@@ -1,3 +1,4 @@
+import 'package:design/utility/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -24,7 +25,7 @@ class ContactUs extends StatelessWidget {
               const Image(
                 height: 200,
                 width: 300,
-                image: AssetImage('assets/images/logo1.jpg'),
+                image: AssetImage(appLogo),
               ),
               const SizedBox(height: 30),
               buildContactInfo("Our toll-free number:", "800-007-0000"),
@@ -47,17 +48,6 @@ class ContactUs extends StatelessWidget {
                       onTap: () {
                         launchUrl(
                           Uri.parse("https://digvijay.rf.gd"),
-                          mode: LaunchMode.inAppWebView,
-                        );
-                      }),
-                  const SizedBox(width: 20),
-                  buildSocialIcon(
-                      icon: Icons.facebook,
-                      iconColor: Colors.blue,
-                      onTap: () {
-                        launchUrl(
-                          Uri.parse(
-                              "https://www.facebook.com/digvijay.jakhaniyaaa/"),
                           mode: LaunchMode.inAppWebView,
                         );
                       }),

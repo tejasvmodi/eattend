@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:design/utility/constants.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -20,7 +21,7 @@ class SplashScreen extends StatelessWidget {
             Column(
               children: [
                 Image.asset(
-                  "assets/images/logo1.jpg",
+                  appLogo,
                   height: 300.0,
                   width: 300.0,
                 ),
@@ -28,7 +29,7 @@ class SplashScreen extends StatelessWidget {
                   height: 40,
                 ),
                 const Text(
-                  "eAttendance",
+                  appName,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
