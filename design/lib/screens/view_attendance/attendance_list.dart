@@ -9,14 +9,36 @@ class AttendanceList extends StatelessWidget {
   }
 
   Widget listView() {
-    return ListView.separated(
-      itemBuilder: (context, index) {
-        return listViewItem(index);
-      },
-      separatorBuilder: (context, index) {
-        return const Divider(height: 5);
-      },
-      itemCount: 5,
+    // Calculate total percentage
+    double totalPercentage = calculateTotalPercentage();
+
+    return Column(
+      children: <Widget>[
+        Expanded(
+          child: ListView.separated(
+            itemBuilder: (context, index) {
+              return listViewItem(index);
+            },
+            separatorBuilder: (context, index) {
+              return const Divider(height: 5);
+            },
+            itemCount: 5,
+          ),
+        ),
+        // Total percentage widget
+        Container(
+          alignment: Alignment.center,
+          padding: const EdgeInsets.all(10),
+          color: Colors.green,
+          child: Text(
+            'Total Percentage: ${totalPercentage.toStringAsFixed(2)}%',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -59,5 +81,11 @@ class AttendanceList extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  double calculateTotalPercentage() {
+    // Perform the calculation here based on your data
+    // For now, returning a fixed value
+    return 75.0;
   }
 }
