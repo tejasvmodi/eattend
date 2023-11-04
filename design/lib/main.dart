@@ -16,7 +16,6 @@ Future<void> main() async {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
   Get.put(GrantPermissions());
   
-  
   runApp(
   ChangeNotifierProvider(
     create: (context) => ButtonState(),
