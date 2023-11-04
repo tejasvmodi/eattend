@@ -40,24 +40,27 @@ class _HomeState extends State<Home> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: TextField(
-                decoration: InputDecoration(labelText: "Enter the OTP"),
-              ),
-            ),
-          ),
-           ElevatedButton(
-          onPressed: buttonState.isButtonEnabled
-              ? () {
-                  // Your action when the button is pressed
-                  buttonState.disableButton(); 
-                  _showAlertDialog(context, "Server Response ");// Disable the button
-                }
-              : null,
-          child: const Text('Press Me'),
-        ),
+          // const SingleChildScrollView(
+          //   child: Padding(
+          //     padding: EdgeInsets.all(16.0),
+          //     // child: TextField(
+          //     //   decoration: InputDecoration(labelText: "Enter the OTP"),
+          //     // ),
+          //   ),
+          // ),
+           Padding(
+             padding: const EdgeInsets.only(left: 115,bottom: 20),
+             child: ElevatedButton(
+                     onPressed: buttonState.isButtonEnabled
+                ? () {
+                    // Your action when the button is pressed
+                    buttonState.disableButton(); 
+                    _showAlertDialog(context, "Server Response");// Disable the button
+                  }
+                : null,
+                     child: const Text('Mark Attendance'),
+                   ),
+           ),
       
 
           //create the second OTP module
